@@ -1,0 +1,19 @@
+<!-- shop/templates/shop/book_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+</head>
+<body>
+    <h1>Book List</h1>
+    <ul>
+        {% for book in books %}
+        <li>
+            <strong>{{ book.title }}</strong> by {{ book.author.name }} - ${{ book.price }}
+        </li>
+        {% empty %}
+        <li>No books available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
